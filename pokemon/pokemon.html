@@ -5,18 +5,52 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>pokemon</title>
+    <script src="./JS/pokemon.JS"></script>
+    <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
-    <h1>pokemon💧🔥🌱</h1>
+<section id="seleccionar-mascota">
+    <h1 class="titulo">   pokemon  </h1>
 
-<section> </section>
+    <h2 class="subtitulo">Elige tu mascota:</h2>
 
-<section></section>
+    <div class="tarjetas">
+        <label class="tarjeta-de-pokemon" for="Trueno">Trueno</label>
+        <input type="radio" name="mascota" id="Trueno" />
+
+        <label class="tarjeta-de-pokemon"  for="Marilyn">Marilyn</label>
+        <input type="radio" name="mascota" id="Marilyn" />
+
+        <label class="tarjeta-de-pokemon" for="Vitto">Vitto</label>
+        <input type="radio" name="mascota" id="Vitto"/>
+</div>
+    <BUTton id="boton-mascota">seleccionar</BUTton>
+<section>
+
+<section id="seleccionar-ataque">
+    <h1 class="titulo">   pokemon💧🔥🌱</h1>
+
+    <h2>Elige tu ataque:</h2>
+     
+    
+    <p>tu mascota <span id="mascota-jugador"></span> tiene <span id="vidas-jugador">3</span> vidas</p>
+    <p>la mascota <span id="mascota-enemigo"></span> del enemigo tiene <span id="vidas-enemigo">3</span>  vidas</p>
 
     <p>
-        <button>fuego 🔥</button>
-        <button>agua 💧</button>
-        <button>tierra 🌱 </button>
+        <button id="boton-fuego">Fuego 🔥</button>
+        <button id="boton-agua">Agua 💧</button>
+        <button id="boton-tierra">Tierra 🌱 </button>
     </p>
+</section>
+
+<section id="mensajes">
+</section>
+
+<section id="reiniciar">
+    <button id="boton-reiniciar">reiniciar</button>
+</section>
+
+
+
 </body>
 </html>
