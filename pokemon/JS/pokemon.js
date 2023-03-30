@@ -3,39 +3,34 @@ let ataqueEnemigo
 let vidasJugador = 3
 let vidasEnemigo = 3
 
-
 function iniciarJuego() {
-let sectionSeleccionarAtaque = document. getElementById ("seleccionar-ataque")
-sectionSeleccionarAtaque.style.display = "none"
+        let sectionSeleccionarAtaque = document.getElementById("seleccionar-ataque")
+        sectionSeleccionarAtaque.style.display = "none"
 
-let sectionReiniciar = document.getElementById("reiniciar")
-sectionReiniciar.style.display = "none"
+        let sectionReiniciar = document.getElementById("reiniciar")
+        sectionReiniciar.style.display = "none"
 
+        let botonMascotaJugador = document.getElementById("boton-mascota");
+        botonMascotaJugador.addEventListener("click", seleccionarMascotaJugador);
 
-    let botonMascotaJugador = document.getElementById("boton-mascota")
-botonMascotaJugador.addEventListener("click",seleccionarMascotaJugador)
+        let botonFuego =  document.getElementById("boton-fuego")
+        botonFuego.addEventListener ("click", ataqueFuego)
+        let botonAgua = document.getElementById("boton-agua")
+        botonAgua.addEventListener ("click", ataqueAgua)
+        let botonTierra = document.getElementById("boton-tierra")
+        botonTierra.addEventListener("click", ataqueTierra)
 
-    let botonFuego =  document.getElementById ("boton-fuego")
-    botonFuego.addEventListener ("click", ataqueFuego)
-    let botonAgua = document.getElementById ("boton-agua")
-    botonAgua.addEventListener ("click", ataqueAgua)
-    let botonTierra = document.getElementById ("boton-tierra")
-    botonTierra.addEventListener ("click", ataqueTierra)
-
-
-    let botonReiniciar =document.getElementById("boton-reiniciar")
-    botonReiniciar.addEventListener ("click", reiniciarJuego)
-
+        let botonReiniciar = document.getElementById("boton-reiniciar")
+        botonReiniciar.addEventListener("click", reiniciarJuego)
 }
 
 function seleccionarMascotaJugador() {
-    let sectionSeleccionarMascota = document. getElementById ("seleccionar-mascota")
+    let sectionSeleccionarMascota = document.getElementById("seleccionar-mascota")
     sectionSeleccionarMascota.style.display = "none"
     
-    let sectionSeleccionarAtaque = document. getElementById ("seleccionar-ataque")
+    let sectionSeleccionarAtaque = document.getElementById("seleccionar-ataque")
     sectionSeleccionarAtaque.style.display = "block"
     
-
     let inputTrueno = document.getElementById("Trueno")
     let inputMarilyn = document.getElementById("Marilyn")
     let inputVitto = document.getElementById("Vitto")
@@ -43,29 +38,28 @@ function seleccionarMascotaJugador() {
 
      if (inputTrueno.checked) {
         spanMascotaJugador.innerHTML = "Trueno"
-    } else if (inputMarilyn.checked){
+    } else if (inputMarilyn.checked) {
         spanMascotaJugador.innerHTML = "Marilyn"
-    } else if (inputVitto.checked){
+    } else if (inputVitto.checked) {
         spanMascotaJugador.innerHTML = "Vitto"
     } else {
         alert("selecciona una mascota porfavor")
     }
 
     seleccionarMascotaEnemigo()
-
 }
+
 function seleccionarMascotaEnemigo() {
      let mascotaAleatorio = aleatorio(1,3)
      let spanMascotaEnemigo = document.getElementById("mascota-enemigo")
 
-if (mascotaAleatorio == 1) {
-    spanMascotaEnemigo.innerHTML = "Trueno"
-} else if (mascotaAleatorio == 2) {
-    spanMascotaEnemigo.innerHTML = "Marilyn"
-} else {
-    spanMascotaEnemigo.innerHTML = "Vitto"
-}
-     
+    if (mascotaAleatorio == 1) {
+        spanMascotaEnemigo.innerHTML = "Trueno"
+    } else if (mascotaAleatorio == 2) {
+        spanMascotaEnemigo.innerHTML = "Marilyn"
+    } else {
+        spanMascotaEnemigo.innerHTML = "Vitto"
+    }    
 }
 
 function ataqueFuego() {

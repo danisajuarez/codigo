@@ -1,12 +1,11 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap');
+
 body{
-    font-family: 'Montserrat', sans-serif;
-    background-color: rgb(182, 95, 156);
+    background-color: #7AA874;
 }
 
 .titulo {
-color: hotpink;
+color: #F7DB6A;
 }
 
 #seleccionar-mascota{
@@ -15,27 +14,35 @@ color: hotpink;
     justify-content: center;
     align-items: center;
 }
-.titulo {
 
-    color: white;
-    }
-.subtitulo{
+    .titulo {
+        
+        font-size: 32px;
 
-}
+        color: #EBB02D;
+        }
+
+    .subtitulo {
+        color: white;
+        font-size: 20px;
+      }
+
     .tarjetas {
         display: flex;
         gap: 10px;
     }
-
-.tarjeta-de-pokemon{
+  
+.tarjeta-de-pokemon {
     width: 100px;
     height: 100px;
-    background: orange;
+    background: #EBB02D;
     padding: 10px;
     box-sizing: border-box;
     margin: 50px;
-    border: 5px solid hotpink;
+    border: 5px solid #D864A9;
+    border-radius: 100px;
 }
-input{
+
+input {
     display: none;
 }
